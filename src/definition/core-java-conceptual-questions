@@ -1,34 +1,78 @@
 Please answer the below core-java Questions:
 
 What is programing language?
-A.
+A. programming language is a vocabulary and set of grammatical rules for
+  instructing a computer or computing device to perform specific tasks.
+
 
 
 
 
 What jdk contains or composed of and define each components?
-A.
+A.The Runtime Interpreter
+  The Compiler
+  The Applet Viewer
+  The Debugger
+  The Class File Disassembler
+  The Header and Stub File Generator
+  The Documentation Generator
+  Applet Demos
+  API Source Code
+
 
 
 
 
 
 What is IDE?
-A.
+A.integrated devolopment environment .
 
 
 
 What are the IDEs available in the market to support java?
-A.
+A.NetBeans. NetBeans is an open-source Integrated Development Environment written in Java. ...
+  Eclipse. Eclipse is another free Java IDE for developers and programmers. ...
+  IntelliJ IDEA Community Edition. ...
+  Android Studio. ...
+  Enide Studio 2014. ...
+  BlueJ. ...
+  jEdit. ...
+  jGRASP.
 
 
 
 Explain the entire java life cycle.
+
+Life cycle of a java program tells us what happens right from the point when
+we type source code in a text editor to the point that source code is converted
+into machine code (0’s and 1’s).
+
+There are three main stages in the life cycle of a java program. They are:
+
+Editing the program
+Compiling the source code
+Executing the byte code
+
 what is class?
+A class is a blueprint that defines the variables and the
+ methods common to all objects of a certain kind.
+
+
 What is object?
+
+In Object-oriented programming, an object is an instance of a Class.
+
 What is the entry point of an application?
+Application entry points are used to control users' access to different
+ versions of an application that is deployed on a platform
+
 Why main is static?
+static means that there is only one copy of the main function is available.
+Java JVM will always look for specific method signature to start running an application,
+and that would be public static void main(String args[]).
+
 Which class is the superclass of all classes?
+
 What is difference between path and classpath variables?
 What is the difference between an Interface and Abstract class?
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?

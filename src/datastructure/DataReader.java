@@ -1,8 +1,35 @@
 package datastructure;
 
-public class DataReader {
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
-	public static void main(String[] args) {
+public class DataReader {
+	BufferedReader br;
+	FileReader fr ;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = null;
+		FileReader fr = null;
+		String fileName = "/Users/rajesh/IdeaProjects/MidtermJuly2019/src/data/self-driving-car";
+		try{
+			fr =new FileReader(fileName);
+			br = new BufferedReader(fr);
+			String CurrentLine;
+			while ((CurrentLine = br.readLine())!=null){
+				System.out.println(CurrentLine);
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+			System.out.println();
+		}finally {
+			br.close();
+			fr.close();
+
+		}}}
+
+
+
 		/*
 		 * User API to read the below textFile and print to console.
 		 * Use BufferedReader class. 
@@ -22,6 +49,6 @@ public class DataReader {
 
 
 
-	}
 
-}
+
+
