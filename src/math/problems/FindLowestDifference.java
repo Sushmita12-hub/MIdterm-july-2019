@@ -1,5 +1,7 @@
 package math.problems;
 
+
+
 public class FindLowestDifference {
     public static void main(String[] args) {
         /*

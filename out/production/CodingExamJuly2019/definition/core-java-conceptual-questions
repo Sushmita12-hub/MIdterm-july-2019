@@ -9,15 +9,11 @@ A. programming language is a vocabulary and set of grammatical rules for
 
 
 What jdk contains or composed of and define each components?
-A.The Runtime Interpreter
-  The Compiler
-  The Applet Viewer
-  The Debugger
-  The Class File Disassembler
-  The Header and Stub File Generator
-  The Documentation Generator
-  Applet Demos
-  API Source Code
+A.Java Development kit. Composed of JRE, Complier, and Debugger.
+                              JRE: Java Runtime Environment.
+                              Complier: Translate source code into byte code.
+      		                Debugger: Provide inspection and debugging.
+
 
 
 
@@ -43,7 +39,7 @@ A.NetBeans. NetBeans is an open-source Integrated Development Environment writte
 
 Explain the entire java life cycle.
 
-Life cycle of a java program tells us what happens right from the point when
+A.Life cycle of a java program tells us what happens right from the point when
 we type source code in a text editor to the point that source code is converted
 into machine code (0’s and 1’s).
 
@@ -54,13 +50,13 @@ Compiling the source code
 Executing the byte code
 
 what is class?
-A class is a blueprint that defines the variables and the
+A .class is a blueprint that defines the variables and the
  methods common to all objects of a certain kind.
 
 
 What is object?
 
-In Object-oriented programming, an object is an instance of a Class.
+ANS:In Object-oriented programming, an object is an instance of a Class.
 
 What is the entry point of an application?
 Application entry points are used to control users' access to different
@@ -77,16 +73,91 @@ What is difference between path and classpath variables?
 What is the difference between an Interface and Abstract class?
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
 what is Access Specifier?
+
+    1.Public: Easily access
+    2.	Private: Members can only access
+    3.	Protected: Can be access from same package and subclass existing in any package can access.
+    4.	Default(No Specifier)
+
 What is OOP ? Define each feature of java OOP.
+ANS:OOP- Object Oriented Program.
+    1.	Inheritance:Inheritance in Java is a mechanism in which one object acquires
+    all the properties andbehaviors of a parent object
+    2.	Abstraction: Implementation hiding
+    3.	Polymorphism: It is an ability of an object to make on many form.
+    Two types of polymorphism:
+    1-	Method Overloading - Happens on Compile time
+    2-	Method Overriding?- Happens on Run time
+    4.	Encapsulation: Data hiding
+
 What is Java Package and which package is imported by default?
+
+ANS:Package in Java is a mechanism to encapsulate a group of classes, sub packages and interfaces.
+Packages are used for: Preventing naming conflicts. ...
+A default member (without any access specifier) is accessible by classes in
+ the same package only.
+3 packages are imported by default for each source file.
+The package with no name.
+The java.lang package.
+The current package.
+
 What is API? Name list of API that you have used so far.
+Ans: API- Application programming interface.
+          List of API:- Core java API, Google, Android,
+
+
 Does java support multiple inheritance, explain why or why not?
+ANS:No. To reduce the complexity and simplify the language.
+
 What is method overloading and when it happens?
+
+A.If a class have a multiple methods by same name but different parameters,
+it is known as method Overloading. Happen on compile time.
+
 Explain exceptions in java and how to handle it.
+
+
+A.Exception is event that interrupts the normal flow of program execution.
+ Exceptions in Java are something that is out of developers control.Try-catch and throw exception
+ two most popular way to handle exception.
+
+
 What is static keyword in java? How it has been used in variables and methods ?
+A.The static keyword used for memory management mainly.
+    Static variables: Static variable is used to refer the common property of all objects.
+    		          Static variable gets memory only once in class area at the time of class loading.
+    Static method:    A static method belongs to the class rater than object of a class.
+                      A static method can be invoked without the need for creating as instance of class.
+
+
+
+
 What is final and how it has been used variables and methods?
+
+
+
+Ans:The final keyword in java is used to restrict the users.
+    The java final keyword can be used in many contexts.
+    Variable: If we make any final variable as final,
+    we cannot change the value of final variable (It will be constant).
+    Method: If we make any final method, we can override it
+
+
+
 What is final, finally and finalize?
+
+A.Final: Final is used to apply restrictions on class, method and variables.
+            Final class cannot be inherited,
+            final method cannot be overridden, and final variable cannot be changed. And final is ?Keyword?.
+    Finally:Finally is used to place important code,
+            it will be executed whether exception is handled or not. And finally is a Block.
+    Finalize:Finalize is a method.Finalize is used to perform clean up processing just before
+     object is grabbed collected.
+
+
 What is a constructor ?
+
+
 Can we have multiple constructors in a class?
 If we don't have a constructor declared, what is called during the object creation?
 What is "this" keyword in java ?

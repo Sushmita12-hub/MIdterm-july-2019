@@ -83,7 +83,7 @@ public class ConnectToSqlDB {
         return dataList;
     }
 
-    public void insertDataFromArrayToSqlTable(int [] ArrayData, String tableName, String columnName)
+    public static void insertDataFromArrayToSqlTable(int[] ArrayData, String tableName, String columnName)
     {
         try {
             connectToSqlDatabase();

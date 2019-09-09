@@ -83,13 +83,17 @@ public class Sort {
 
     
 
-    public int [] mergeSort(int [] array,int n){
+    public int [] mergeSort(int [] array,int low,int high){
 
         final long startTime = System.currentTimeMillis();
         int[] list = array;
 
-
-      //implement here
+        if(low < high) {
+            int middle = (low + high)/2;
+            mergeSort(array, low, middle);
+            mergeSort(array, middle+1, high);
+            mergeHalves(array, low, middle, high);
+        }
 
         final long endTime = System.currentTimeMillis();
         final long executionTime = endTime - startTime;
@@ -100,39 +104,84 @@ public class Sort {
 
 
 
+    public void mergeHalves(int[] array, int low, int middle, int high) {
+        int[] temp = new int[high - low + 1];
+        int left = low;
+        int right = middle + 1;
+        int k = 0;
 
-
-
-
-
-
-
-
-
-        
-        
-
-
-
-    
-
-    public int [] quickSort(int [] array){
-        int [] list = array;
-        //implement here
-        
-        
-
-        return list;
+        while(left <= middle && right <= high) {
+            if(array[left] < array[right]) {
+                temp[k] = array[left];
+                left++;
+            } else {
+                temp[k] = array[right];
+                right++;
+            }
+            k++;
+        }
+        if(left <= middle) {
+            while(left <= middle) {
+                temp[k] = array[left];
+                left++;
+                k++;
+            }
+        } else if(right <= high) {
+            while(right <= high) {
+                temp[k] = array[right];
+                right++;
+                k++;
+            }
+        }
+        for(int i = 0; i < temp.length; i++) {
+            array[low + i] = temp[i];
+        }
     }
-    
-    public int [] heapSort(int [] array){
-        int [] list = array;
-        //implement here
-        
-        
 
-        return list;
-    }
+//    e = executionTime;
+//        return list;
+//    }
+
+
+
+
+
+
+
+//    public int[] quickSort(int[] array, int low, int high) {          // quick sort
+//        final long startTime = System.currentTimeMillis();
+//        int[] list = array;
+//        //implement here
+//        if (low < high) {
+//            int next = partition (array, low, high);
+//            quickSort(array, low, next - 1);
+//            quickSort(array, next + 1, high);
+//        }
+//        final long endTime = System.currentTimeMillis();
+//        final long executionTime = endTime - startTime;
+//        this.executionTime = executionTime;
+//        return list;
+//    }
+//
+//
+//
+//    public int[] heapSort(int[] array) {                           //heap sort
+//        final long startTime = System.currentTimeMillis();
+//        int[] list = array;
+//        //implement here
+//        for (int i = array.length - 1; i >= 1; i--) {
+//            int temp = array[0];
+//            array[0] = array[i];
+//            array[i] = temp;
+//            heapify(array, i, 0);
+//        }
+//        final long endTime = System.currentTimeMillis();
+//        final long executionTime = endTime - startTime;
+//        this.executionTim
+//
+//
+//    ;
+
 
 
     public int [] bucketSort(int [] array){

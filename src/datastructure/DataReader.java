@@ -26,7 +26,9 @@ public class DataReader {
 			br.close();
 			fr.close();
 
-		}}}
+		}
+	}
+}
 
 
 
