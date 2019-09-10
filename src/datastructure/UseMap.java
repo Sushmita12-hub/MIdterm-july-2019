@@ -31,12 +31,24 @@ public class UseMap {
 		phone.add("Samsung");
 		phone.add ("Nokia");
 
-		 //Map<String,List<String>> mylist =new HashMap<>();
-		// mylist.put
-		//for (Map.Entry entry : fruthsAndCountry.entrySet()){
-			//System.out.println(entry.getKey()+ " "+ entry.getValue());
-		}
+
+
+
+
+	LinkedHashMap<String, List<String>> fruthsAndflowerAndphone = new LinkedHashMap<>();
+		fruthsAndflowerAndphone.put("This is fruits name: ",  fruits);
+		fruthsAndflowerAndphone.put("This is flower name: ",flower);
+		fruthsAndflowerAndphone.put("This is my phone:",phone);
+
+
+				for (Map.Entry entry : fruthsAndflowerAndphone.entrySet()){
+				System.out.println(entry.getKey()+ " "+ entry.getValue());
+
+				}
+
+
 	}
+}
 
 
 

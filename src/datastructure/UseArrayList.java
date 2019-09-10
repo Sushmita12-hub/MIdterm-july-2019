@@ -1,5 +1,7 @@
 package datastructure;
 
+import databases.ConnectToSqlDB;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -37,6 +39,10 @@ public class UseArrayList {
 		}
 	}
 }
+//	ConnectToSqlDB connectToSqlDB= new ConnectToSqlDB();
+//
+//		connectToSqlDB.InsertDataFromArrayListToMySql(arrayList, "User", "Name");
+//			connectDB.readDataBase("User","Name");
 
 
 
