@@ -35,10 +35,11 @@ public class UseQueue {
 		for(String name : queue){ // for each loop
 			System.out.println(name);
 		}
-		Iterator iterator = queue.iterator(); // use iterator
-		while (iterator.hasNext()){
-			System.out.println(iterator.next());
-		}
+//		System.out.println("using while loop");
+//		Iterator iterator = queue.iterator(); // use iterator
+//		while (iterator.hasNext()){
+//			System.out.println(iterator.next());
+//		}
 	}
 }
 

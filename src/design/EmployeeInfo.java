@@ -21,7 +21,8 @@ public class EmployeeInfo {
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
-	
+	private static int performance;
+
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -32,13 +33,71 @@ public class EmployeeInfo {
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
 	 */
+
+	private int employeeId;
+	private String name;
+	private static double salary;
 	public EmployeeInfo(int employeeId){
+		this.employeeId=employeeId;
 		
 	}
     public EmployeeInfo(String name, int employeeId){
+		this.name=name;
+		this.employeeId=employeeId;
 		
 	}
-	
+
+	public EmployeeInfo(int employeeId, String name, double salary,
+						int performance) {
+		this.employeeId = employeeId;
+		this.name = name;
+		this.salary = salary;
+		this.performance = performance;
+
+	}
+
+	public static String getCompanyName() {
+		return companyName;
+	}
+
+	public static void setCompanyName(String companyName) {
+		EmployeeInfo.companyName = companyName;
+	}
+
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public int getPerformance() {
+		return performance;
+	}
+
+	public void setPerformance(int performance) {
+		this.performance = performance;
+	}
+
+
+
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -47,8 +106,24 @@ public class EmployeeInfo {
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
-		int total=0;
+	public static double calculateEmployeeBonus(double numberOfYearsWithCompany){
+		double total=0;
+
+
+		if(performance==5){
+			total = salary*.01;
+		}else if(performance==4){
+			total = salary*.08;
+		}else if(performance==3){
+			total= salary*0.6;
+		}else if (performance==2){
+			total= salary*.04;
+		}else if(performance==1){
+			total = salary*0.2;
+		}else if(performance==0){
+			total = 0;
+		}
+		System.out.println("The total employee bonus : $" + total);
 		return total;
 	}
 	

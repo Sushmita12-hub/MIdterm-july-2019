@@ -38,6 +38,8 @@ public class ProcessStudentInfo {
 			public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 				//Path of XML data to be read.
 				String pathSelenium  = System.getProperty("user.dir") +"/src/parser/selenium.xml";
+
+
 				String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
 				String tag = "id";
                 //Create ConnectToSqlDB Object

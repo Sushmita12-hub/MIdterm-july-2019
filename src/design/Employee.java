@@ -23,4 +23,11 @@ public interface Employee {
 	//employee benefit
 	public void benefitLayout();
 
+
+	//employee socialSecurity number
+	public void socialSEcurityNumber();
+
+	//employee performance
+	public void performance();
+
 }

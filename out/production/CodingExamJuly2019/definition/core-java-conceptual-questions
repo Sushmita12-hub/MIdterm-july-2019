@@ -156,45 +156,218 @@ A.Final: Final is used to apply restrictions on class, method and variables.
 
 
 What is a constructor ?
-
+A.Constructor is just like a method that is used to initialize the state of and object.
+  It is invoked at the name of the object creation.
 
 Can we have multiple constructors in a class?
+
+
+A.A class can have multiple constructors, as long as
+ their signature (the parameters they take) are not the same.
+
+
 If we don't have a constructor declared, what is called during the object creation?
+
+A.All classes have at least one constructor. If a class does not explicitly declare any, the Java compiler
+automatically provides a no-argument constructor, called the default constructor.
+
+
 What is "this" keyword in java ?
+
+ A.There can be a lot of usage of java keyword.
+     In java this is a reference variable that refers to the current object,
+     and instance variable.
+
+
 What is "super" keyword in java? How many possible way can you use?
+
+super is a keyword. It is used inside a sub-class method definition to call a method defined
+in the super class. Private methods of the super-class cannot be called. Only public and protected
+methods can be called by the super keyword.
+It is also used by class constructors to invoke constructors of its parent class.
+It is keyword that refers to the immediate parent class object.
+
 What is JVM stand for ?
+Ans: JVM: Java virtual machine.
+
+
 Is JVM platform independent?
+
+Every system has its own JVM which gets installed automatically when the jdk software is installed. ...
+An important point to be noted is that while JAVA is platform-independent language,
+the JVM is platform-dependent.
+
 What version of java are you using?
+
+
 What is JAR stand for ?
+ A.Java Archive.
+
 What is the difference between JDK and JVM?
+
+A.JDK is for development purpose whereas JRE is for running the java programs. JDK and JRE both contains JVM so that we can
+run our java program. JVM is the heart of java programming language and provides platform independence.
+
 What is the difference between JVM and JRE?
+
+JRE is an acronym for Java Runtime Environment.It is used to provide runtime environment.It is the implementation of JVM.
+It physically exists.It contains set of libraries + other files that JVM uses at runtime.
+ JDK is an acronym for Java Development Kit.It physically exists.It contains JRE + development tools.
+
+
 What is compile time and run time?
+
+Compile time: A compile time error is a problem such as syntax error (example; }  )
+                   or spelling mistake example (string), instead of String.
+     Runtime:      A runtime error occurs while your program is running.
+                   Sometimes this error can be tough to track down.
+
 What is heap?
+A.The heap section contains Object (May also contain reference variable)
+
 How java manage it's memory?
+A.Memory management is the process of allocating new
+     objects and removing unused objects to make space for those new object allocations.
+     This section presents some basic memory management concepts
+     and explains the basics about object allocation and garbage collection.
+
 What is the difference between String, StringBuffer and StringBuilder?
+A.String: String is an immutable class, it cannot be changed.
+     StringBuffer: Is the original synchronized version of string Builder
+     StringBuilder: String buffer is mutable class that can be appended to,
+                    characters replaced or removed and ultimately converted.
+
 What is Singleton class?
+
+ A.Singleton class:We can make constructor as private.
+     So that We can not create an object outside of the class. T
+     his property is useful to create singleton class in java.
+     Singleton pattern helps us to keep only one instance of a class at any time.
+     The purpose of singleton is to control object creation by keeping private constructor.
+
 What is Serialization and Deserialization?
+A.Serialization is a mechanism of converting the state of an object into a byte stream.
+       Deserialization is the reverse process where the byte stream is used to
+       recreate the actual Java object in memory. This mechanism is used to persist the object.
+
 when to use transient variable in java?
+
+The Java transient keyword is used on class attributes/variables to indicate that serialization
+process of such class should ignore such variables while creating a persistent byte stream for any
+instance of that class. A transient variable is a variable that can not be serialized.
+
 Difference between while and do..while loop?
+
+The difference between the two is that the do while loop will continue while the condition is true.
+The do until loop will continue while the condition is false. Do while loops are exited after the first cycle
+if the condition is false, while do until loops are exited if the condition is true
+
 What is Enum?
+
+
+
 What is Iterator?
 Which one will take more memory, an int or Integer?
+Ans:
 Why is String Immutable in Java?
 What is constructor chaining in Java?
 The difference between Serial and Parallel Garbage Collector?
+
+
 What is JIT stands for?
+
+A.JIT stands for Just In time compilation and JVM stands for Java Virtual Machine.
+    JVM is a virtual machine used in Java programming platform to execute or run Java programs.
+
 Explain Java Heap space and Garbage collection?
+A.whenever we create an object using new operator or by any another means the
+    object is allocated memory from Heap and When object dies or garbage collected, memory goes back to Heap space in Java,
+    to learn more about garbage collection see how garbage collection works in Java.
+
 Can you guarantee the garbage collection process?
+
+Being an automatic process, programmers need not initiate the garbage collection process explicitly in the code.
+ ... It can choose to reject the request and so it is not guaranteed that these calls will do the garbage collection.
+  This decision is taken by the JVM based on the eden space availability in heap memory.
+
+
 What is the difference between stack and heap in Java?
+
+ The main difference between heap and stack is that stack memory is used to store local variables and function call
+ while heap memory is used to store objects in Java. ...  Variables stored in stacks are only visible to the owner
+ Thread while objects created in the heap are visible to all thread.
+
+
 What is reflection in java and why is it useful?
+
+ A.Reflection is an API that is used to examine or modify the behaviour of methods, classes and interfaces at runtime.
+ The required packages for Reflection, the “java.lang.reflect” package, allows us to invoke methods at runtime irrespective
+ of the access modifier.
+
+
 what is multithreading in java?
+
+
+A.Multithreading in java is a process of executing multiple threads simultaneously.
+ A thread is a lightweight sub-process, the smallest unit of processing. Multiprocessing
+ and multithreading, both are used to achieve multitasking. ...
+Java Multithreading is mostly used in games, animation, etc.
+
+
 What is the use of synchronization in Java?
+
+A.The Java synchronized keyword is an essential tool in concurrent programming in Java.
+Its overall purpose is to only allow one thread at a time into a particular section of code
+ thus allowing us to protect, for example, variables or data from being corrupted by simultaneous
+ modifications from different threads.
+
 What is Framework?
+
+Ans:A framework, or software framework, is a platform for developing software applications. ...
+For example, a framework may include predefined classes and functions that can be used to process input,
+ manage hardware devices, and interact with system software.
+
+
 What are the testing Framework available in java?
+
+A.10 Useful Unit and Integration Testing tools for Java Programmers
+1.JUnit. I don't think JUnit needs any introduction. ...
+2.REST Assured. Testing and validating REST services in Java is harder than in dynamic languages such as Groovy. ...
+3.Selenium. ...
+4.TestNG. ...
+5.Mockito. ...
+6.Spock Framework. ...
+7.Cucumber. ...
+8.Spring Test.
+9.DBUnit
+10.Robot framework
+
+
 Difference between jUnit and testNG?
+
+A.TestNG uses test groups, which can categorize tests according to features such as run times. As I said at
+the beginning of this column, JUnit 4 and TestNG are similar on the surface. But whereas JUnit is designed
+to hone in on a unit of code, TestNG is meant for high-level testing.
+
+
 What are the dependencies for this project?
+
+A.Dependencies are the relationships of the preceding tasks to the succeeding tasks. Tasks may have multiple preceding tasks and
+multiple succeeding tasks. The most common dependency relationship is a finish-to-start relationship. Task P (predecessor) must
+be finished before task S (successor) can start.
+
+
 what is dependency injection in java?
+Dependency injection is a concept valid for any programming language. ... According to this concept a class should not configure
+its dependencies statically but should be configured from the outside. A Java class has a dependency on another class, if it uses
+an instance of this class. We call this a _class dependency.
+
+
 What is static binding and dynamic binding?
+
+A.Static binding happens at compile-time while dynamic binding happens at runtime. Binding of private, static and final methods always
+ happen at compile time since these methods cannot be overridden. ... The binding of overloaded methods is static and the binding of
+ overridden methods is dynamic.
 
 
 

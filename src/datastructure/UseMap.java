@@ -1,8 +1,13 @@
 package datastructure;
 
+import databases.ConnectToSqlDB;
+import databases.User;
+
 import java.util.*;
 
 public class UseMap {
+
+
 
 	public static void main(String[] args) {
 		/*
@@ -41,14 +46,36 @@ public class UseMap {
 		fruthsAndflowerAndphone.put("This is my phone:",phone);
 
 
-				for (Map.Entry entry : fruthsAndflowerAndphone.entrySet()){
-				System.out.println(entry.getKey()+ " "+ entry.getValue());
+				for (Map.Entry <String,List<String>> entry: fruthsAndflowerAndphone.entrySet())
+					System.out.println(entry.getKey() + " " + entry.getValue());
 
-				}
+
+
+//		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
+//
+//		connectToSqlDB. insertDataFromStringToSqlTable("fruits","Fruit_table");
+//
+//		connectToSqlDB.insertDataFromArrayListToSqlTable(, "flower_table","nameOfFlower");
+//
+//
+//		List<String> retrievedFruit = ConnectToSqlDB.readUserProfileFromSqlTable("Fruit_table");
+//
+//		System.out.println("Retrieving Fruits....");
+//		for(String fruit: retrievedFruit) {
+//			System.out.println(fruit);
+//		}
+//
+//		List<String> retrievedFlower = ConnectToSqlDB.readUserProfileFromSqlTable("flower_table");
+//
+//		System.out.println("Retrieving Flower....");
+//		for(String flower: retrievedFlower) {
+//			System.out.println(flower);
+//		}
 
 
 	}
 }
-
+//connectToSqlDB.insertDataFromArrayToSqlTable(nameOfFruit, "fruit_table");
+//
 
 
